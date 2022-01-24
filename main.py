@@ -9,7 +9,7 @@ import os
 user = os.getenv("EMAIL")
 password = os.getenv("PASSWORD")
 
-service = Service(executable_path="C:/Users/wesle/Development/ChromeDriver/chromedriver.exe")
+service = Service(executable_path=os.getenv("DRIVER_PATH"))
 driver = webdriver.Chrome(service=service)
 
 driver.get(url="https://www.linkedin.com/")
